@@ -82,7 +82,7 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
     /* Offset for sticky header */
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 body {
@@ -91,7 +91,7 @@ body {
     color: var(--color-text-primary);
     line-height: 1.6;
     transition: var(--transition-theme);
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 a {
@@ -147,6 +147,17 @@ p {
     background-color: var(--color-primary-hover);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
+}
+
+.cv-icon {
+    display: none;
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+[data-theme="dark"] .cv-icon {
+    filter: invert(0);
 }
 
 .button-social {
@@ -229,6 +240,10 @@ p {
 .nav-list {
     display: flex;
     gap: var(--spacing-lg);
+}
+
+.nav-menu {
+    display: none;
 }
 
 .nav-link {
@@ -807,6 +822,10 @@ section {
         display: flex;
     }
 
+    .nav-desktop {
+        display: none;
+    }
+
     /* ====================================
        SIDE DRAWER PROFESIONAL
        Desliza desde la derecha, ancho parcial
@@ -952,18 +971,21 @@ section {
 
     /* Ocultar texto "Descargar CV" y mostrar solo icono en pantallas muy pequeñas */
     #cv-btn {
-        font-size: 0;
-        padding: var(--spacing-sm);
+        padding: 0;
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    #cv-btn::after {
-        content: '⇩';
-        font-size: var(--text-lg);
-        color: var(--color-text-inverse);
+    #cv-btn .cv-text {
+        display: none;
+    }
+
+    #cv-btn .cv-icon {
+        display: block;
     }
 
     .name {

@@ -19,15 +19,9 @@
                 <p><span class="logo-text">Jolu</span> Software</p>
             </a>
             <button class="mobile-menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-                <img src="./img/menu.svg" alt="Abrir menú" class="menu-icon-img" width="24" height="24">
+                <img src="./icons/menu.svg" alt="Abrir menú" class="menu-icon-img" width="24" height="24">
             </button>
-            <nav class="nav-menu" id="nav-menu">
-                <div class="nav-drawer-header">
-                    <p class="nav-drawer-brand"><span class="logo-text">Jolu</span> Software</p>
-                    <button class="mobile-menu-close" aria-label="Cerrar menú">
-                        <img src="./img/x.svg" alt="Cerrar menú" width="22" height="22">
-                    </button>
-                </div>
+            <nav class="nav-desktop">
                 <ul class="nav-list">
                     <li><a href="#inicio" class="nav-link">Inicio</a></li>
                     <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
@@ -39,16 +33,34 @@
         </div>
         <div class="header-right" style="display: flex; align-items: center; gap: 1rem;">
             <button id="theme-toggle" class="button button-icon" aria-label="Cambiar tema">
-                <span class="icon-sun"><img src="./img/sun.svg" alt=""></span>
-                <span class="icon-moon" style="display: none;"><img src="./img/moon.svg" alt=""></span>
+                <span class="icon-sun"><img src="./icons/sun.svg" alt=""></span>
+                <span class="icon-moon" style="display: none;"><img src="./icons/moon.svg" alt=""></span>
             </button>
             <div class="cv">
                 <a href="#" download="CV_JORGE_LUIS_ENRIQUEZ_HERRERA.pdf"
-                    data-secure-path="Li9kb3dubG9hZHMvQ1ZfSk9SR0VfTFVJU19FTlJJUVVFWl9IRVJSRVJBLnBkZg=="
-                    id="cv-btn" class="button button-primary secure-link">Descargar CV</a>
+                    data-secure-path="Li9kb3dubG9hZHMvQ1ZfSk9SR0VfTFVJU19FTlJJUVVFWl9IRVJSRVJBLnBkZg==" id="cv-btn"
+                    class="button button-primary secure-link"><span class="cv-text">Descargar CV</span><img
+                        src="./icons/download.svg" alt="" class="cv-icon" width="20" height="20"></a>
             </div>
         </div>
     </header>
+    <nav class="nav-menu" id="nav-menu">
+        <div class="nav-drawer-header">
+            <a href="#" class="logo">
+                <p><span class="logo-text">Jolu</span> Software</p>
+            </a>
+            <button class="mobile-menu-close" aria-label="Cerrar menú">
+                <img src="./icons/x.svg" alt="Cerrar menú" width="22" height="22">
+            </button>
+        </div>
+        <ul class="nav-list">
+            <li><a href="#inicio" class="nav-link">Inicio</a></li>
+            <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+            <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+            <li><a href="#estudios" class="nav-link">Estudios</a></li>
+            <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+    </nav>
     <div class="nav-overlay" id="nav-overlay"></div>
 
     <main>
@@ -111,7 +123,7 @@
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project-card">
-                    <img class="project-image" name="POSVENTA INICIO" src="./img/posventa.svg">
+                    <img class="project-image" name="POSVENTA INICIO" src="./icons/posventa.svg">
                     <!-- Placeholder image -->
                     <div class="project-content">
                         <h3 class="project-title">Punto de venta</h3>
@@ -156,7 +168,7 @@
 
                 <!-- Project 3 -->
                 <div class="project-card">
-                    <img class="project-image" src="./img/bustravel.svg"></img>
+                    <img class="project-image" src="./icons/bustravel.svg"></img>
                     <div class="project-content">
                         <h3 class="project-title">Prototipo UX/UI de Autobuses “Bustravel"</h3>
                         <div class="project-tags">
@@ -183,12 +195,10 @@
                     <div class="timeline-content">
                         <h3>Desarrollo con IA: Programa con Agentes
                         </h3>
-                        <span class="timeline-institution">BIG School | <a
-                                href="#"
+                        <span class="timeline-institution">BIG School | <a href="#"
                                 data-secure-path="Li9kb3dubG9hZHMvQ2VydGlmaWNhZG8tSm9yZ2UtTHVpcy1FbnJpcXVlei1IZXJyZXJhLURlc2Fycm9sbG8tY29uLUlBLVByb2dyYW1hLWNvbi1BZ2VudGVzLnBkZg=="
                                 download="Certificado-Jorge-Luis-Enriquez-Herrera-Desarrollo-con-IA-Programa-con-Agentes.pdf"
-                                class="secure-link"
-                                style="color: blue; text-decoration: none;">Certificado</a></span>
+                                class="secure-link" style="color: blue; text-decoration: none;">Certificado</a></span>
                         <p>Integración de IA al desarrollo de software, automatización de tareas con uso multiagente y
                             utilización de fundamentos de programación para guiar y optimizar el uso de la IA.</p>
                     </div>
@@ -198,12 +208,10 @@
                     <div class="timeline-date">2026 - Marzo</div>
                     <div class="timeline-content">
                         <h3>Desarrollo con IA: de 0 a Produccion</h3>
-                        <span class="timeline-institution">BIG School | <a
-                                href="#"
+                        <span class="timeline-institution">BIG School | <a href="#"
                                 data-secure-path="Li9kb3dubG9hZHMvQ2VydGlmaWNhZG8tSm9yZ2UtTHVpcy1FbnJpcXVlei1IZXJyZXJhLURlc2Fycm9sbG8tY29uLUlBLWRlLTAtYS1Qcm9kdWNjaW9uLnBkZg=="
                                 download="Certificado-Jorge-Luis-Enriquez-Herrera-Desarrollo-con-IA-de-0-a-Produccion.pdf"
-                                class="secure-link"
-                                style="color: blue; text-decoration: none;">Certificado</a></span>
+                                class="secure-link" style="color: blue; text-decoration: none;">Certificado</a></span>
                         <p>Integración de IA al desarrollo de software, automatización de tareas con uso multiagente y
                             utilización de fundamentos de programación para guiar y optimizar el uso de la IA.</p>
                     </div>
@@ -242,10 +250,12 @@
                         simplemente quieres saludar, ¡escríbeme!</p>
 
                     <div class="contact-item">
-                        <strong>Email:</strong> <span class="secure-email" data-secure-email="aWktSm9yZ2VIZXJyZXJhQG91dGxvb2suY29t"><em>Cargando...</em></span>
+                        <strong>Email:</strong> <span class="secure-email"
+                            data-secure-email="aWktSm9yZ2VIZXJyZXJhQG91dGxvb2suY29t"><em>Cargando...</em></span>
                     </div>
                     <div class="contact-item">
-                        <strong>Teléfono:</strong> <span class="secure-phone" data-secure-phone="KzUyIDYxOCAzMzIgNjAzMw=="><em>Cargando...</em></span>
+                        <strong>Teléfono:</strong> <span class="secure-phone"
+                            data-secure-phone="KzUyIDYxOCAzMzIgNjAzMw=="><em>Cargando...</em></span>
                     </div>
                     <div class="contact-item">
                         <strong>Ubicación:</strong> Remoto / Durango, México.
