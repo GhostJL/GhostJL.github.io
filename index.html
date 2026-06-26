@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorge Herrera - Portafolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="#inicio" class="logo">
+                <p><span class="logo-text">Jolu</span> Software</p>
+            </a>
+            <button class="mobile-menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <img src="./img/menu.svg" alt="Abrir menú" class="menu-icon-img" width="24" height="24">
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <div class="nav-drawer-header">
+                    <p class="nav-drawer-brand"><span class="logo-text">Jolu</span> Software</p>
+                    <button class="mobile-menu-close" aria-label="Cerrar menú">
+                        <img src="./img/x.svg" alt="Cerrar menú" width="22" height="22">
+                    </button>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+                    <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                    <li><a href="#estudios" class="nav-link">Estudios</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right" style="display: flex; align-items: center; gap: 1rem;">
+            <button id="theme-toggle" class="button button-icon" aria-label="Cambiar tema">
+                <span class="icon-sun"><img src="./img/sun.svg" alt=""></span>
+                <span class="icon-moon" style="display: none;"><img src="./img/moon.svg" alt=""></span>
+            </button>
+            <div class="cv">
+                <a href="./downloads/CV_JORGE_LUIS_ENRIQUEZ_HERRERA.pdf" download="CV_JORGE_LUIS_ENRIQUEZ_HERRERA.pdf"
+                    id="cv-btn" class="button button-primary">Descargar CV</a>
+            </div>
+        </div>
+    </header>
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <main>
+        <section id="inicio" class="section-inicio fade-up">
+            <div class="container-text">
+                <h1 class="name fade-up delay-100">Hola, soy Jorge Herrera</h1>
+                <h2 class="job fade-up delay-200">Desarrollador Front-End</h2>
+                <span class="state">Disponible para trabajar</span>
+                <p class="bio">Creo experiencias web modernas, accesibles y de buena calidad, enfocadas en el usuario.
+                </p>
+                <div class="container-contacts">
+                    <a class="button button-social"
+                        href="https://www.linkedin.com/in/jorge-luis-enriquez-herrera-3a406926a">LinkedIn</a>
+                    <a class="button button-social" href="https://github.com/GhostJL">GitHub</a>
+                    <a class="button button-social" href="https://www.instagram.com/jolusoftware">Instagram</a>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <a href="#proyectos" class="button button-primary" style="text-decoration: none;">Ver
+                        Proyectos</a>
+                </div>
+            </div>
+            <div class="container-image">
+                <div class="container-image">
+                    <div class="image-wrapper">
+                        <img src="./img/me.jpg" alt="Jorge Herrera" class="hero-image">
+                    </div>
+                </div>
+        </section>
+
+        <section id="sobre-mi" class="section-me fade-up">
+            <h2 class="section-title">Sobre mí</h2>
+            <p class="subtitle-me fade-up delay-100">Ingeniero de Software & Creativo Digital</p>
+            <p class="description-me">Soy ingeniero en Informática con pasión por la transformación digital. Me
+                especializo en desarrollo <strong>Front-End</strong> y <strong>Móvil</strong>, creando interfaces
+                intuitivas y funcionales. Mi objetivo es combinar diseño y tecnología para resolver problemas reales.
+            </p>
+
+            <div class="skills-grid">
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Flutter</span>
+                <span class="skill-tag">Figma</span>
+                <span class="skill-tag">Github</span>
+                <span class="skill-tag">Firebase</span>
+                <span class="skill-tag">OpenCode</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">UX/UI</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">SQLite</span>
+                <span class="skill-tag">Adobe Photoshop</span>
+                <span class="skill-tag">Adobe Illustrator</span>
+                <span class="skill-tag">Affinity</span>
+                <span class="skill-tag">After Effects</span>
+            </div>
+        </section>
+
+        <section id="proyectos" class="fade-up">
+            <h2 class="section-title">Mis Proyectos</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img class="project-image" name="POSVENTA INICIO" src="./img/posventa.svg">
+                    <!-- Placeholder image -->
+                    <div class="project-content">
+                        <h3 class="project-title">Punto de venta</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Flutter</span>
+                            <span class="project-tag">Drift</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">Riverpod</span>
+                        </div>
+                        <p>Sistema punto de venta multiplataforma en el cual puedes llevar inventario, compras, ventas,
+                            generar reportes, gestionar personal y tus ventas.</p>
+                        <div class="project-links">
+                            <button class="button button-social">APK</button>
+                            <button class="button button-social">Windows próximamente</button>
+                            <button class="button button-social">Código privado</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img class="project-image" src="./img/yournotes.png"></img>
+                    <div class="project-content">
+                        <h3 class="project-title">|---YOUR-NOTES---|</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JS</span>
+                            <span class="project-tag">PHP</span>
+                            <span class="project-tag">MySQL</span>
+                        </div>
+                        <p>Aplicación web para la administración de notas y agendas de contactos con funciones completas
+                            de edición, eliminación y visualización. Destaca por la integración de un módulo
+                            especializado de auditoría que registra y almacena el historial de acciones del usuario,
+                            mejorando el control y la trazabilidad de la aplicación.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/GhostJL/---YOUR-NOTES---/tree/main"
+                                class="button button-social">Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <img class="project-image" src="./img/bustravel.svg"></img>
+                    <div class="project-content">
+                        <h3 class="project-title">Prototipo UX/UI de Autobuses “Bustravel"</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Figma</span>
+                        </div>
+                        <p>Proyecto de diseño UX/UI enfocado en optimizar el transporte público en Durango, México. Tras
+                            una investigación de mercado y análisis de movilidad local, conceptualicé y diseñé la
+                            interfaz completa en Figma.</p>
+                        <div class="project-links">
+                            <a href="https://www.figma.com/design/UHEDm7U0FB4WYZYDjoHysO/proto---bustravel?node-id=0-1&t=x74y6w5VkGu3myRO-1"
+                                class="button button-social">Prototipo y diseño</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="estudios" class="section-studies fade-up">
+            <h2 class="section-title">Mis Estudios</h2>
+            <div class="timeline fade-up delay-100">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2026 - Junio</div>
+                    <div class="timeline-content">
+                        <h3>Desarrollo con IA: Programa con Agentes
+                        </h3>
+                        <span class="timeline-institution">BIG School | <a
+                                href="./downloads/Certificado-Jorge-Luis-Enriquez-Herrera-Desarrollo-con-IA-Programa-con-Agentes.pdf"
+                                download="Certificado-Jorge-Luis-Enriquez-Herrera-Desarrollo-con-IA-Programa-con-Agentes.pdf"
+                                style="color: blue; text-decoration: none;">Certificado</a></span>
+                        <p>Integración de IA al desarrollo de software, automatización de tareas con uso multiagente y
+                            utilización de fundamentos de programación para guiar y optimizar el uso de la IA.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2026 - Marzo</div>
+                    <div class="timeline-content">
+                        <h3>Desarrollo con IA: de 0 a Produccion</h3>
+                        <span class="timeline-institution">BIG School | <a
+                                href="./downloads/Certificado-Jorge-Luis-Enriquez-Herrera-Desarrollo-con-IA-de-0-a-Produccion.pdf"
+                                download="Certificado-Jorge-Luis-Enriquez-Herrera-Desarrollo-con-IA-de-0-a-Produccion.pdf"
+                                style="color: blue; text-decoration: none;">Certificado</a></span>
+                        <p>Integración de IA al desarrollo de software, automatización de tareas con uso multiagente y
+                            utilización de fundamentos de programación para guiar y optimizar el uso de la IA.</p>
+                    </div>
+                </div>
+                <!-- Additional Item Example -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2018 - 2025</div>
+                    <div class="timeline-content">
+                        <h3>Ingeniería en Informática</h3>
+                        <span class="timeline-institution">Instituto Tecnológico de Durango</span>
+                        <p>Formación profesional en el área de la informática en diseño, desarrollo, implementación y
+                            administración de proyectos informáticos con una visión sistémica, tecnológica y
+                            estratégica; ofreciendo soluciones innovadoras e integrales a las organizaciones de acuerdo
+                            con las necesidades actuales.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h3>Diseño y Animación Digital</h3>
+                        <span class="timeline-institution">INAAM Durango</span>
+                        <p>Especialización en el uso de AdobePhotoshop, Illustrator y After Effects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="fade-up">
+            <h2 class="section-title">Contáctame</h2>
+            <div class="contact-container" style="display: block;">
+                <div class="contact-info">
+                    <h3>¡Hablemos!</h3>
+                    <p>Estoy abierto a nuevas oportunidades laborales y colaboraciones. Si tienes un proyecto en mente o
+                        simplemente quieres saludar, ¡escríbeme!</p>
+
+                    <div class="contact-item">
+                        <strong>Email:</strong> ii-JorgeHerrera@outlook.com
+                    </div>
+                    <div class="contact-item">
+                        <strong>Teléfono:</strong> +52 618 332 6033
+                    </div>
+                    <div class="contact-item">
+                        <strong>Ubicación:</strong> Remoto / Durango, México.
+                    </div>
+
+                    <div class="container-contacts" style="justify-content: flex-start;">
+                        <a href="https://www.linkedin.com/in/jorge-luis-enriquez-herrera-94a058161/"
+                            class="button button-social">LinkedIn</a>
+                        <a href="https://github.com/Jolu3" class="button button-social">GitHub</a>
+                        <a href="https://www.instagram.com/jorgeluis_e_h/" class="button button-social">Instagram</a>
+                    </div>
+                </div>
+
+                <!-- <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" class="form-input" placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-input" placeholder="tu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" class="form-textarea"
+                            placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                    <button type="submit" class="button button-primary">Enviar Mensaje</button>
+                </form> -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column footer-brand">
+                <a href="#inicio" class="logo" style="color: white; margin-bottom: 1rem;">
+                    <p><span class="logo-text" style="color: white;">Jolu</span> Software</p>
+                </a>
+                <p class="footer-description">
+                    Creando experiencias digitales excepcionales con código limpio y diseño moderno.
+                </p>
+            </div>
+
+            <div class="footer-column footer-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#estudios">Estudios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column footer-social">
+                <h4>Sígueme</h4>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/jorge-luis-enriquez-herrera-3a406926a" aria-label="LinkedIn"
+                        class="social-link">LinkedIn</a>
+                    <a href="https://github.com/GhostJL" aria-label="GitHub" class="social-link">GitHub</a>
+                    <a href="https://www.instagram.com/jolusoftware" aria-label="Instagram"
+                        class="social-link">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-text">© 2026 Jolu Software. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
