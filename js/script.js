@@ -83,4 +83,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const animatedElements = document.querySelectorAll('.fade-up, .fade-in');
     animatedElements.forEach(el => observer.observe(el));
+
+    // Decrypt obfuscated information to protect against scrapers/spiders
+    // Decodes path only when clicked/hovered/focused for download buttons
+    document.querySelectorAll('.secure-link').forEach(el => {
+        const encoded = el.getAttribute('data-secure-path');
+        if (encoded) {
+            const decryptPath = () => {
+                const decoded = atob(encoded);
+                if (el.getAttribute('href') !== decoded) {
+                    el.setAttribute('href', decoded);
+                }
+            };
+            el.addEventListener('pointerenter', decryptPath, { once: true });
+            el.addEventListener('focus', decryptPath, { once: true });
+            el.addEventListener('click', decryptPath);
+        }
+    });
+
+    // Decodes email address and turns it into a clickable link
+    document.querySelectorAll('.secure-email').forEach(el => {
+        const encoded = el.getAttribute('data-secure-email');
+        if (encoded) {
+            const email = atob(encoded);
+            el.innerHTML = '';
+            const link = document.createElement('a');
+            link.href = 'mailto:' + email;
+            link.textContent = email;
+            link.style.color = 'inherit';
+            link.style.textDecoration = 'none';
+            link.addEventListener('mouseenter', () => link.style.textDecoration = 'underline');
+            link.addEventListener('mouseleave', () => link.style.textDecoration = 'none');
+            el.appendChild(link);
+        }
+    });
+
+    // Decodes phone number and turns it into a clickable link
+    document.querySelectorAll('.secure-phone').forEach(el => {
+        const encoded = el.getAttribute('data-secure-phone');
+        if (encoded) {
+            const phone = atob(encoded);
+            el.innerHTML = '';
+            const link = document.createElement('a');
+            link.href = 'tel:' + phone.replace(/\s+/g, '');
+            link.textContent = phone;
+            link.style.color = 'inherit';
+            link.style.textDecoration = 'none';
+            link.addEventListener('mouseenter', () => link.style.textDecoration = 'underline');
+            link.addEventListener('mouseleave', () => link.style.textDecoration = 'none');
+            el.appendChild(link);
+        }
+    });
 });

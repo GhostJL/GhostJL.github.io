@@ -82,6 +82,7 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
     /* Offset for sticky header */
+    overflow-x: hidden;
 }
 
 body {
@@ -90,6 +91,7 @@ body {
     color: var(--color-text-primary);
     line-height: 1.6;
     transition: var(--transition-theme);
+    overflow-x: hidden;
 }
 
 a {
@@ -819,13 +821,17 @@ section {
         display: flex;
         flex-direction: column;
         z-index: 1001;
-        transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
         box-shadow: -6px 0 40px rgba(0, 0, 0, 0.18);
         overflow-y: auto;
+        visibility: hidden;
+        pointer-events: none;
     }
 
     .nav-menu.active {
         right: 0;
+        visibility: visible;
+        pointer-events: auto;
     }
 
     /* Encabezado del drawer: logo + X */
